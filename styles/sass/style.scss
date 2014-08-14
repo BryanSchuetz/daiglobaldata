@@ -18,7 +18,12 @@
 header{
   padding-bottom: 1.5em;
   border-bottom: 1px solid $border-gray;
-  background-color: $background-gray;
+  background-image: url(/images/highbg.png);
+  background-color: $highlight-blue;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position:fixed;
   right: 0;
   left: 0;
@@ -104,7 +109,7 @@ code{
 #arrow{
   fill: black;
 }
-.ringer{
+.polygoner{
   width: 40px;
   height: 40px;
   position: relative;
@@ -113,9 +118,9 @@ code{
   margin: auto;
   margin-bottom: -45px;
 }
-#ring{
+#Polygon-1{
   fill: none;
-  stroke: #FF982D;
+  stroke: $highlight-blue;
 }
 hr{
   border-bottom: 1px solid black;
@@ -123,6 +128,7 @@ hr{
   border-left: 0px;
   border-right: 0px;
   margin: 1.5em 0 1.5em 0;
+  color: #475476;
 }
 // Footer
 footer{

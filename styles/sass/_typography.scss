@@ -1,10 +1,8 @@
 @import 'grid';
 
-// Merriweather font-weights
-$light: 300;
+// ff meta web pro font-weights
 $normal: 400;
 $bold: 700;
-$ultra-bold: 900;
 
 //FOUT, it is the worst
 body{
@@ -18,7 +16,7 @@ body{
   visibility: visible;
 }
 .wf-active body{
-  font-family: Merriweather;
+  font-family: 'ff-meta-serif-web-pro', Georgia, serif;
   display: block;
   visibility: visible;
 }
@@ -26,12 +24,15 @@ body{
 // Header
 h1{
   font-weight: bold;
+  font-family: 'ff-meta-web-pro', Helvetica, sans-serif;
+  font-weight: 700;
   font-size: 3em;
   a{
     border-bottom: 0;
   }
 }
 h2{
+  font-family: 'ff-meta-web-pro', Helvetica, sans-serif;
   font-size: 1.5em;
   a{
     border-bottom: 0;
@@ -41,7 +42,9 @@ h2{
   text-align: center;
 }
 .masthead-tagline{
-  font-size: .8em;
+  font-size: .9em;
+  font-family: 'ff-meta-web-pro', Helvetica, sans-serif;
+  font-weight: 700;
 }
 
 // Body Text
@@ -58,11 +61,11 @@ li{
 // Various
 .details{
   font-size: .8em;
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'ff-meta-web-pro', helvetica, arial, sans-serif;
 }
 
 nav ul li a{
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'ff-meta-web-pro', helvetica, arial, sans-serif;
   font-size: .7em;
   border-bottom: 0;
 }
