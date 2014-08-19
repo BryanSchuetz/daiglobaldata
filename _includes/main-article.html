@@ -1,8 +1,9 @@
 <section class="article-header">
   <h2><a href="{{ current.url }}">{{ current.title }}</a></h2>
-  <p>
+  <p class="details date">{{ current.date | date: "%B %Y" }}</p>
+  <p class="details">Tags:
     {% for tag in taxonomy.tags %}
-      <a class="details" href="{{ tag.url }}">{{ tag.value }}</a>
+      <a href="{{ tag.url }}">{{ tag.value }}</a>
     {% endfor %}
   </p>
   <hr>
@@ -11,3 +12,5 @@
 <section class="article-content">
   {{ current.body }}
 </section>
+<hr>
+<svg class="polygoner" viewBox="0 0 96 94" preserveAspectRatio="xMinYMax meet"><use xlink:href="#polygoner"></use></svg>

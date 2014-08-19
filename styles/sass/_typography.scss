@@ -3,10 +3,12 @@
 // ff meta web pro font-weights
 $normal: 400;
 $bold: 700;
+$extra-bold: 800;
+$black: 900;
 
 //FOUT, it is the worst
 body{
-  font-family: Georgia;
+  font-family: helvetica;
   font-size: $font-size;
   line-height: 1.5;
   visibility: hidden;
@@ -16,7 +18,7 @@ body{
   visibility: visible;
 }
 .wf-active body{
-  font-family: 'ff-meta-serif-web-pro', Georgia, serif;
+  font-family: 'proxima-nova', helvetica, arial, sans-serif;
   display: block;
   visibility: visible;
 }
@@ -24,26 +26,31 @@ body{
 // Header
 h1{
   font-weight: bold;
-  font-family: 'ff-meta-web-pro', Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 3em;
+  font-family: 'proxima-nova', Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  margin-top: 0;
   a{
+    color: $body-text;
     border-bottom: 0;
+    background: none;
+    padding: 0;
   }
 }
 h2{
-  font-family: 'ff-meta-web-pro', Helvetica, sans-serif;
+  font-family: 'proxima-nova', helvetica, arial, sans-serif;
   font-size: 1.5em;
   a{
     border-bottom: 0;
+    background: none;
   }
 }
 .center{
   text-align: center;
 }
 .masthead-tagline{
-  font-size: .9em;
-  font-family: 'ff-meta-web-pro', Helvetica, sans-serif;
+  font-size: 1em;
+  font-family: 'proxima-nova', helvetica, arial, sans-serif;
   font-weight: 700;
 }
 
@@ -61,18 +68,38 @@ li{
 // Various
 .details{
   font-size: .8em;
-  font-family: 'ff-meta-web-pro', helvetica, arial, sans-serif;
+  font-family: 'proxima-nova', helvetica, arial, sans-serif;
 }
-
-nav ul li a{
-  font-family: 'ff-meta-web-pro', helvetica, arial, sans-serif;
+.date{
+  margin: 0;
+  color: lighten($body-text, 10%);
+}
+nav ul a{
+  font-family: 'proxima-nova', helvetica, arial, sans-serif;
   font-size: .7em;
   border-bottom: 0;
+  background: none;
+
+}
+nav ul{
+  margin-bottom: 0;
+  margin-top: .6em;
 }
 
 // Links
 a{
-  color: #303030;
+  color: $body-text;
   text-decoration: none;
-  border-bottom: 1px solid #303030;
+  padding: 3px;
+  background-color: lighten(#D9E8F7, 4%);
+  -webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+}
+a:hover{
+  opacity: .8;
+}
+.caption{
+  margin-top: 0;
+  font-size: .6em;
 }

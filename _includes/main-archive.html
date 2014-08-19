@@ -1,12 +1,15 @@
 <h2 class="center">#{{ title }}</h2>
+<hr>
+<svg class="polygoner" viewBox="0 0 96 94" preserveAspectRatio="xMinYMax meet"><use xlink:href="#polygoner"></use></svg>
 <section class="article-list">
-  {% for article in site.posts %}
+  {% for article in posts %}
     <article id="">
-      <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
       <p>{{ article.excerpt }}</p>
-      <p class="read-more details"><svg class="more-arrow" viewBox="0 0 206 206" preserveAspectRatio="xMinYMax"><use xlink:href="#more-arrow"></use></svg><a href="{{ article.url }}">Read more</a></p>
+      <p class="read-more details"><svg class="more-arrow" viewBox="0 0 206 206" preserveAspectRatio="xMinYMax"><use xlink:href="#more-arrow"></use></svg><a href="{{ article.url }}">Read More</a></p>
     </article>
     <hr>
-    <svg class="ringer" viewBox="-5 -15 206 206" preserveAspectRatio="xMinYMax meet"><use xlink:href="#ring"></use></svg>
+    <svg class="polygoner" viewBox="0 0 96 94" preserveAspectRatio="xMinYMax meet"><use xlink:href="#polygoner"></use></svg>
   {% endfor %}
+  <br>
 </section>

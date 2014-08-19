@@ -29,7 +29,15 @@
 */
 @media screen and (min-width: 30em) {
   .header-wrap, main, .footer-wrap{
-    @include width(6)
+    @include width(6);
+  }
+  .masthead{
+    @include width(4);
+    margin-top: 1.5em;
+  }
+  nav{
+    @include width(3);
+    float: right;
   }
 
 }
@@ -63,10 +71,7 @@
     float: left;
     margin-right: $gutter;
   }
-  nav{
-    @include width(3);
-    float: right;
-  }
+
 }
 
 /*
@@ -88,18 +93,8 @@
   li, .details{
     font-size: 1.1em;
   }
-
-}
-
-/*
-  Extra Large
-  1887-Wicked Big
-*/
-@media screen and (min-width: 77em){
-  // Grid
-  .header-wrap, main, .footer-wrap{
-    @include width(14)
+  .masthead{
+    @include width(8);
   }
-  // Typography
 
 }

@@ -1,12 +1,37 @@
-{% if site.pages.news.posts %}
-  {% assign page = site.pages.news %}
-  {% assign article = page.posts.first %}
-  {% assign current = page.posts.first %}
-  {% assign parent = page %}
-{% endif %}
+  {% assign current = site.pages.news.posts.first %}
+  {% assign setpage = site.pages.current-data-sets %}
+  {% assign aboutpage = site.pages.about %}
+  {% assign parent = site.pages.news %}
 
 {% capture content %}
-  {% include 'includes/main-article' %}
+  <section class="article-header">
+    <h2><svg class="flag-chart" viewBox="0 0 361 389" preserveAspectRatio="xMinYMax meet"><use xlink:href="#flag-chart"></use></svg>DAI Is Data Driven</h2>
+    {{ aboutpage.excerpt }}
+    <p class="read-more details"><svg class="more-arrow" viewBox="0 0 206 206" preserveAspectRatio="xMinYMax"><use xlink:href="#more-arrow"></use></svg><a href="/about">Read More</a></p>
+    <hr>
+    <svg class="polygoner" viewBox="0 0 96 94" preserveAspectRatio="xMinYMax meet"><use xlink:href="#polygoner"></use></svg>
+  </section>
+  <section class="article-header">
+    <h2><a href="{{ current.url }}">{{ current.title }}</a></h2>
+    <p class="details date">{{ current.date | date: "%B %Y" }}</p>
+    <p class="details">Tags:
+      {% for tag in current.taxonomy.tags %}
+        <a href="{{ tag.url }}">{{ tag.value }}</a>
+      {% endfor %}
+    </p>
+  </section>
+  <section class="article-content">
+    {{ current.excerpt }}
+    <p class="read-more details"><svg class="more-arrow" viewBox="0 0 206 206" preserveAspectRatio="xMinYMax"><use xlink:href="#more-arrow"></use></svg><a href="{{ current.url }}">Read More</a></p>
+  </section>
+  <hr>
+  <svg class="polygoner" viewBox="0 0 96 94" preserveAspectRatio="xMinYMax meet"><use xlink:href="#polygoner"></use></svg>
+  <section class="article-header">
+      <h2><svg class="flag-chart" viewBox="0 0 361 389" preserveAspectRatio="xMinYMax meet"><use xlink:href="#flag-chart"></svg>{{ setpage.title }}</h2>
+        {{ setpage.body }}
+  </section>
+  <hr>
+  <svg class="polygoner" viewBox="0 0 96 94" preserveAspectRatio="xMinYMax meet"><use xlink:href="#polygoner"></use></svg>
   {% include 'includes/related-articles' %}
 {% endcapture %}
 
