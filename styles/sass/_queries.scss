@@ -67,9 +67,12 @@
     top: 10px;
   }
   .masthead{
-    @include width(5);
+    @include width(6);
     float: left;
     margin-right: $gutter;
+  }
+  nav{
+    @include width(2);
   }
 
 }

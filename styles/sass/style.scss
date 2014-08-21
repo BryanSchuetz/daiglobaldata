@@ -16,26 +16,29 @@
 // Header
 
 header{
+  overflow: hidden;
   padding-bottom: 1.5em;
   border-bottom: 1px solid $border-gray;
-  background-image: url(/images/highbg.png);
-  background-color: $highlight-blue;
-  background-clip: border-box;
+  background-image: url(/images/highbg.jpg);
+  background-color: $background-gray;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position:fixed;
+  top:0;
+  width: 100%;
   z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0;
-  transition: all 0.3s;
+  height: 12em;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
 }
 .masthead-title{
   margin-bottom: 0;
 }
 .masthead-tagline{
   margin-top: 0;
+  opacity: 1;
 }
 nav{
   text-align: right;
@@ -55,29 +58,28 @@ nav ul{
     }
   }
 }
-header{
-  height: 12em;
-  overflow: hidden;
-}
-.headroom--not-top{
-  height: 6em;
-  transition:all 0.3s;
-  -webkit-box-shadow: 0px 0px 4px 0px #75747B;
-        box-shadow: 0px 0px 4px 0px #75747B;
+header.headroom--not-top{
+  height: 7em;
+  box-shadow:0px 0px 4px 0px #75747B;
+  -webkit-transition:box-shadow 0.1s linear, height 0.2s ease-in-out;
+  transition:box-shadow 0.1s linear, height 0.2s ease-in-out;
   .masthead-tagline {
-    visibility: hidden;
-    opacity:0;
-    transition:visibility 0s linear 0.3s,opacity 0.3s linear;
+    opacity: 0;
+    -webkit-transition:opacity 0.2s linear;
+    transition:opacity 0.2s linear;
   }
 }
-.headroom--top{
-  height: 12em;
-  transition:all 0.3s;
-  .masthead-tagline {
-    visibility: visible;
-    opacity: 1;
-    transition:opacity 0.5s linear;
 
+
+header.headroom--top{
+  height: 12em;
+  box-shadow:0px 0px 0px 0px #75747B;
+  -webkit-transition:box-shadow 0.1s linear, height 0.2s ease-in-out;
+  transition:box-shadow 0.1s linear, height 0.2s ease-in-out;
+  .masthead-tagline {
+    opacity: 1;
+    -webkit-transition:opacity 0.2s linear;
+    transition:opacity 0.2s linear;
   }
 }
 // Main
@@ -150,8 +152,8 @@ code{
   margin-right: 2px;
 }
 .flag{
-  height: 23px;
-  width: 33px;
+  height: 26px;
+  width: 46px;
   margin-right: 3px;
 }
 .logo{
