@@ -108,11 +108,19 @@ code{
   display: block;
   margin: auto;
 }
-.article-content ul li{
-  list-style-type: circle;
+.article-content ul{
   padding-left: .5em;
-  list-style-position: inside;
-
+  li{
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+}
+.article-related ul{
+  padding-left: .5em;
+  li{
+    list-style-type: none;
+    list-style-position: outside;
+  }
 }
 .read-more{
   text-align: right;
