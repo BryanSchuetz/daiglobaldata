@@ -73,9 +73,12 @@ li{
   font-size: .8em;
   font-family: 'proxima-nova', helvetica, arial, sans-serif;
 }
-.date{
+.date, .author{
   margin: 0;
   color: lighten($body-text, 10%);
+}
+.author{
+  font-weight: bold;
 }
 nav ul a{
   font-family: 'proxima-nova', helvetica, arial, sans-serif;

@@ -13,6 +13,13 @@
   </section>
   <section class="article-header">
     <h2><a href="{{ current.url }}">{{ current.title }}</a></h2>
+      <p class="details author">By:
+    {% if current.author.fullname == 'john_deriggi@dai.com' %}
+      John Deriggi
+    {% else %}
+      {{ current.author.fullname }}
+    {% endif %}
+  </p>
     <p class="details date">{{ current.date | date: "%B %Y" }}</p>
     <p class="details">Tags:
       {% for tag in current.taxonomy.tags %}
